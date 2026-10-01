@@ -1,0 +1,16 @@
+name: Call a reusable workflow
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  call-workflow-1:
+    uses: zorza-org/zorza-workflow-reusable/.github/workflows/workflow.yaml@main
+    with:
+      action-name: zorza-action1
+
+  call-workflow-2:
+    uses: zorza-org/zorza-workflow-reusable/.github/workflows/workflow.yaml@main
+    with:
+      action-name: zorza-action2
